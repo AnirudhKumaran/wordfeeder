@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+{% block title %} Word Feeder {% endblock %}
+{% block head_scripts %}
+  <script type="text/javascript" src="../scripts/index.js"></script>
+  <link rel="stylesheet" href="../style/index.css">
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    
+    <form class="my-2" >
+      <div class="input-group my-1">
+        <input id="inputWordFile" type="text" class="form-control" disabled/>
+        <div class="input-group-append">
+          <button id="formWordFile" class="btn btn-success" type="button">Load</button>
+        </div>
+      </div>
+      <button id="processWordFile" type="button" class="btn btn-primary btn-lg my-1">Process Word Fields</button>
+      <button id="resetWordFile" type="button" class="btn btn-success btn-lg my-1">Reset</button>
+    </form>
+    <hr/>
+    <form id="generateFileForm" class="my-2">
+      <div class="flex-container my-2" id="formFields">
+      </div>
+      <hr/>
+      <div class="row">
+        <div class="col-6"><input class="form-control my-1" id="outputFileName" type="text" placeholder="File Name" required/></div>
+        <div class="col-6"><button type="submit" class="btn btn-primary my-1">Generate Word File</button></div>
+      </div>
+      
+      
+    </form>
+
+  </div>
+  <!--
+    <input class="form-control-file" type="file" placeholder="Default input" />
+
+  -->
+{% endblock %}
